@@ -6,6 +6,7 @@
 ## Notes
 - Utilized a single data source due to deprecation or paid options. Chose NewsApi.org for its comprehensiveness.
 - NewsApi.org imposes rate limits on Free accounts, allowing only 100 requests per day.
+- Couldn't deploy to Vercel, since NewsApi.org wouldn't allow endpoint hit from non-localhost origin in the Free plan.
 
 ## Docker Commands
 - Build Image:
