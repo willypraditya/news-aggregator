@@ -19,22 +19,17 @@ const Navbar = () => {
     <AppBar sx={{ position: 'static', padding: 1, boxShadow: 'none' }}>
       <Grid
         container
-        justifyContent="space-between"
         alignItems="center"
         gap={2}
+        justifyContent={{
+          xs: 'center',
+          sm: 'space-between',
+        }}
       >
         <Grid item>
-          <Grid container alignItems="center" gap={1}>
-            <Grid item>
-              <Typography
-                variant="h4"
-                sx={{ display: { xs: 'none', sm: 'block' } }}
-                className={logoFont.className}
-              >
-                The Not Washington Post
-              </Typography>
-            </Grid>
-          </Grid>
+          <Typography variant="h4" className={logoFont.className}>
+            The Not Washington Post
+          </Typography>
         </Grid>
 
         <Grid item>
