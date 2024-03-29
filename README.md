@@ -16,6 +16,7 @@
     ```
     docker run -p 3000:3000 news-aggregator
     ```
+- Open in localhost:3000
 
 ## Improvement Note
 - Consider implementing React virtualization for the Articles list.

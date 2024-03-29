@@ -10,10 +10,11 @@ FROM node:18-alpine as runner
 WORKDIR /app
 COPY --from=builder /app/package.json .
 COPY --from=builder /app/package-lock.json .
-COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/next.config.mjs ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/.next/standalone ./.next/standalone
+COPY --from=builder /app/public ./.next/standalone/public
+COPY --from=builder /app/.next/static ./.next/standalone/.next/static
+
 EXPOSE 3000
 
 ENV NEXT_PUBLIC_NEWS_API=https://newsapi.org/v2
